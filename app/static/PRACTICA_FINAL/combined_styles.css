@@ -1,0 +1,92 @@
+/*AUTOR: JONATHAN MOROCHO*/
+/*FECHA: 23/11/2024*/
+/*VERSION: 1.0*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    background: #283747;
+    padding: 20px 10px;
+    text-align: center;
+    border-bottom: 10px solid #ffffff;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icono-redondo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header h1 {
+    color: #ffffff;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.container {
+    background: #283747;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.description {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.data {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
