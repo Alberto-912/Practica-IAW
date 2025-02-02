@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas</title>
+    <style>
+        .stars {
+            font-size: 24px;
+            color: gold;
+        }
+        .star {
+            font-size: 30px;
+            margin-right: 5px;
+        }
+        .filled {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reseñas de Usuarios</h1>
+
+    <!-- Mostrar media de calificación con estrellas -->
+    <h2>Calificación Media:</h2>
+    <div class="stars">
+        {% for i in range(1, 6) %}
+            {% if i <= media_calificacion %}
+                <span class="star filled">★</span>
+            {% else %}
+                <span class="star">☆</span>
+            {% endif %}
+        {% endfor %}
+        <p>Media: {{ "%.1f"|format(media_calificacion) }}/5</p>
+    </div>
+
+    <!-- Sección de Reseñas -->
+    <h2>Opiniones</h2>
+    <div>
+        {% for res in reseñas %}
+            <p><strong>{{ res[0] }}</strong> ({{ res[2] }}/5): {{ res[1] }}</p>
+        {% endfor %}
+    </div>
+
+    <!-- Formulario para agregar reseña -->
+    <h2>Deja tu Reseña</h2>
+    <form action="{{ url_for('agregar_resena') }}" method="POST">
+        <label for="nombre">Tu Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="comentario">Reseña:</label>
+        <textarea id="comentario" name="comentario" maxlength="250"></textarea>
+
+        <label for="calificacion">Calificación (1-5):</label>
+        <input type="number" id="calificacion" name="calificacion" min="1" max="5" required>
+
+        <button type="submit">Enviar Reseña</button>
+    </form>
+</body>
+</html>
