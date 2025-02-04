@@ -1,0 +1,118 @@
+/* Todo el body arial, fondo blanco y letra negra */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header azul oscuro, letra blanca y texto alineado al centro */
+.header {
+    background-color: #283747;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+/* Contenedor principal que tiene practicamente todo con fondo blanco, bordes redondeados con sombreado y que ocupa el 90% */
+main {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* La información del coche centrada */
+.car-details {
+    text-align: center;
+}
+
+/* foto que ocupa como mucho 500px de ancho, borde redondeado y un poco de margen*/
+.car-details img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Títulos azules */
+h2 {
+    color: #283747;
+    text-align: center;
+}
+
+/* Formulario en columna */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Etiquetas para indicar el campo del formulario en negrita */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Los huecos para meter texto blancos con borde redondeado */
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Botón de envío verde con letras blancas redondeado y al ponerle el cursor se convierte en un puntero */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Al pasar el raton por el boton se pone ligeramente mas oscuro */
+button:hover {
+    background-color: #218838;
+}
+
+/* Precio total en rosa y negrita */
+#total-price {
+    font-size: 1.5em;
+    color: #d9534f;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Errores de JavaScript en rojo */
+.error { 
+    color: red; 
+    font-size: 0.9em; 
+}
+
+/* Media para pantallas más pequeñas (letras mas pequeñas y menos margenes */
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+    main {
+        width: 95%;
+        padding: 15px;
+    }
+    button {
+        font-size: 1em;
+        padding: 10px;
+    }
+    #total-price {
+        font-size: 1.2em;
+    }
+}

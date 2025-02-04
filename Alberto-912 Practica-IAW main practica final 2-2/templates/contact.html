@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Head con javascript y CSS enlazados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="/static/contact.css"> 
+    <script src="/static/contact.js" defer></script>
+</head>
+<body>
+    <!-- Header con el logo que redirige al index y vinculos a los demás HTML-->
+    <header class="header">
+        <div class="header-container">
+            <a href="/templates/index.html" class="logo">
+                <img src="/static/iconos/LOGOTOTAL.png" alt="Icono Coche">
+            </a>
+            <h1 class="title">Alquiler Lepanto</h1>
+            <nav class="nav-links">
+                <a href="/templates/locations.html">Ubicaciones</a>
+                <a href="/templates/contact.html">Contacto</a>
+                <a href="/templates/flota.html">Flota</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="contact-container">
+        <h2>Contacta con nosotros</h2>
+        
+        <section class="contact-form">
+            <p>Para cualquier tipo de duda, consulta o cualquiera otra cosa relevante, no dudes en contactarnos mediante este formulario:</p>
+            <!-- Formulario simple que se valida con JavaScript (contact.js)-->
+            <form action="contact.html" method="get" onsubmit="return validarFormulario(event)">
+
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" oninput="validarCampo(this)" placeholder="Juan García">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" oninput="validarCampo(this)" placeholder="correo@ejemplo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="6" oninput="validarCampo(this)" placeholder="Escribe tu mensaje aquí."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Enviar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="contact-info">
+            <h2>Otras formas de contacto</h2>
+            <p>Si deseas contactar por nosotros mediante otro medio también puedes usar los siguientes métodos:</p>
+            <p><strong>Teléfono:</strong> +34 612 456 789</p>
+            <p><strong>Correo Electrónico:</strong> AlquilerLepanto@lepanto.com</p>
+            <p><strong>Dirección:</strong> Calle Luis de Requesens 1, Villarejo de Salvanés, Madrid, 28590</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Footer con redirecciones a index.html y logos de redes sociales que llevan a ellas-->
+        <div class="footer-container">
+        
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul class="footer-list">
+                    <li><a href="/templates/index.html">Alquiler de coches</a></li>
+                    <li><a href="/templates/index.html">Alquiler de furgonetas</a></li>
+                    <li><a href="/templates/index.html">Taller de mecánica</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Sede Villarejo de Salvanés</h3>
+                <p>Calle Luis de Requesens, 1</p>
+                <p>Villarejo de Salvanés, 28590</p>
+            </div>
+           
+            <div class="footer-section">
+                <h3>Síguenos en redes sociales</h3>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/BMW.Espana/?locale=es_ES"><img src="/static/iconos/10462343.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/opel_spain/?hl=es"><img src="/static/iconos/10462345.png" alt="Instagram"></a>
+                    <a href="https://es.linkedin.com/company/citroen"><img src="/static/iconos/10462330.png" alt="LinkedIn"></a>
+                    <a href="https://x.com/mbenzesp"><img src="/static/iconos/10483410.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 - IAW</p>
+            <p>
+                <a href="/templates/index.html">Aviso legal</a> | 
+                <a href="/templates/index.html">Política de Privacidad</a> | 
+                <a href="/templates/index.html">Política de cookies</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,291 @@
+/* body arial con fondo grisaceo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #95939346;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+}
+/* Header azul oscuro y letras blancas, que siempre este presente arriba*/
+.header {
+    background-color: #283747;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/* Todo centrado y ocupa todo el ancho*/
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+/* Logo de 70px, al pasar el cursor se vuelve un puntero*/
+.logo img {
+    height: 70px;
+    cursor: pointer;
+}
+/* El titulo en arial, letra grande negrita y siempre en mayusculas*/
+.title {
+    font-size: 3rem;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* Los links color blanco y si se les pasa el raton se subrayan*/
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+} 
+
+h2 {
+    color: #333;
+}
+
+/* Contenedor del formulario de contacto centrado y en columnas */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Formulario con fondo gris claro, bordes redondeados y sombreado */
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.565);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-form p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+/* Donde se escribe bas oscuro y redondeado */
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+/* Boton de enviar azul redondeado y al pararle el raton se vuelve un puntero y el boton se hace mas oscuro*/
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Para las otras formas de contacto fondo blanco, bordes redondeados con sombreado negro */
+.contact-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+}
+
+.contact-info strong {
+    font-weight: bold;
+}
+
+/* Footer azul oscuro abajo del todo y ocupa todo el ancho*/
+.footer {
+    background-color: #283747;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+/* Letras blancas, ligero margen y al ponerlees el raton se subrayan*/
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 8px;
+}
+
+.footer-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-list a:hover {
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+/* Las imagenes de RRSS de 80px al pasarles el raton se hacen un poco mas grandes*/
+.footer-socials a img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.footer-socials a img:hover {
+    transform: scale(1.2);
+}
+/* Texto de abajo separado de lo demás, letras blancas y al pasar el raton se subraya*/
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+/* Errores de Javascript en rojo */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Estilos para pantallas de menos de 480px (en general todo o mas pequeño o con menos padding...) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        padding-top: 100px;
+    }
+    
+    .header {
+        padding: 15px;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .nav-links a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .contact-form, .contact-info {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .submit-btn {
+        width: 100%;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-section {
+        min-width: auto;
+    }
+    
+    .footer-socials {
+        justify-content: center;
+    }
+    
+    .footer-socials a img {
+        width: 60px;
+        height: 60px;
+    }
+}

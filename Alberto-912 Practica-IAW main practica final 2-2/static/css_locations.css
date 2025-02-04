@@ -1,0 +1,244 @@
+/* Todo el body fondo blanco y letra arial blanca */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+/* Los contenedores de las localizaciones en columnas separados por 40px */
+.locations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+/* Las localizaciones individialmente fondo azul oscuro, en filas y bordes redondeados y sombreados */
+.location-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color:#283747;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.location-info {
+    flex: 1;
+    font-size: 1.2rem;
+}
+/* Imagen de las localizaciones de 800 x 300 que se expanda para ocupar todo el hueco y borde redondeado*/
+.location-image {
+    width: 800px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 8px;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+.location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+/* Los links azules y al pasarles el raton se subraya*/
+.location-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.location-info a:hover {
+    text-decoration: underline;
+}
+/* Las localizaciones se ponen en filas con espacio entre ellas*/
+.current-location .location-box {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.upcoming-locations .location-box {
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* Letra negra en los h2 de las localizaciones */
+.current-location h2 {
+    color: black;
+}
+
+.upcoming-locations h2 {
+    color: black;
+}
+/* Header azul oscuro y letras blancas, que siempre este presente arriba*/
+.header {
+    background-color: #283747;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/* Todo centrado y ocupa todo el ancho*/
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+/* Logo de 70px, al pasar el cursor se vuelve un puntero*/
+.logo img {
+    height: 70px;
+    cursor: pointer;
+}
+/* El titulo en arial, letra grande negrita y siempre en mayusculas*/
+.title {
+    font-size: 3rem;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* Los links color blanco y si se les pasa el raton se subrayan*/
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+/* Footer azul oscuro abajo del todo y ocupa todo el ancho*/
+.footer {
+    background-color: #283747;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+/* Letras blancas, ligero margen y al ponerlees el raton se subrayan*/
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 8px;
+}
+
+.footer-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-list a:hover {
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+/* Las imagenes de RRSS de 80px al pasarles el raton se hacen un poco mas grandes*/
+.footer-socials a img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.footer-socials a img:hover {
+    transform: scale(1.2);
+}
+/* Texto de abajo separado de lo demás, letras blancas y al pasar el raton se subraya*/
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Adaptacion a pantallas pequeñas */
+@media (max-width: 480px) {
+    body {
+        background-color: white;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    
+    .locations-container {
+        gap: 20px;
+    }
+    
+    .location-box {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .location-image {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-socials {
+        justify-content: center;
+    }
+}

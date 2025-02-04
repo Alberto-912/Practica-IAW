@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Head con javascript y CSS enlazados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALQUILER LEPANTO</title>
+    <link rel="stylesheet" href="/static/css_flota.css">
+    <script src="/static/flota.js"></script>
+</head>
+<body>
+    <header class="header">
+        <!-- Header con el logo que redirige al index y vinculos a los demás HTML-->
+        <div class="header-container">
+            <a href="/templates/index.html" class="logo">
+                <img src="/static/iconos/LOGOTOTAL.png" alt="Icono Coche">
+            </a>
+            <h1 class="title">ALQUILER LEPANTO</h1>
+            <nav class="nav-links">
+                <a href="/templates/locations.html">Ubicaciones</a>
+                <a href="/templates/contact.html">Contacto</a>
+                <a href="/templates/flota.html">Flota</a>
+            </nav>
+        </div>
+    </header>
+    
+
+    <div class="main-container">
+        <!-- Bloques de contenido con todos los coches y su información, tambien la linea onclick para coger la información para alquiler.html -->
+        <div class="container" onclick="seleccionarCoche('bmwm3', 'BMW M3, Coupé', '53.95€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/bmwm3.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">BMW M3, Coupé</h2>
+                <p class="price">53,95€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>2</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>6,1/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/transport_16550978.png" class="icon" alt="Icono 3">
+                        <p>Automático</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('c3aircross', 'Citroen C3 Aircross, SUV', '25.99€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/c3aircross.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Citroen C3 Aircross, SUV</h2>
+                <p class="price">25.99€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>5</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>4,6/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/caja-de-cambios.png" class="icon" alt="Icono 3">
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('c4cactus', 'Citroen C4 Cactus, SUV', '28.99€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/c4cactus.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Citroen C4 Cactus, SUV</h2>
+                <p class="price">28.99€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>5</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>4,7/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/caja-de-cambios.png" class="icon" alt="Icono 3">
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('c5aircross', 'Citroen C5 Aircross, SUV', '33.99€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/c5aircross.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Citroen C5 Aircross, SUV</h2>
+                <p class="price">33.99€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>5</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>5,1/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/caja-de-cambios.png" class="icon" alt="Icono 3">
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('daciasandero', 'Dacia Sandero, Hatchback', '23.99€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/daciasandero.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Dacia Sandero, Hatchback</h2>
+                <p class="price">23.99€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>5</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>4,2/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/caja-de-cambios.png" class="icon" alt="Icono 3">
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('fiat500', 'Fiat 500, Hatchback', '19.49€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/fiat500.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Fiat 500, Hatchback</h2>
+                <p class="price">19.49€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>4</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>4,2/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/caja-de-cambios.png" class="icon" alt="Icono 3">
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('fiatpanda', 'Fiat Panda, SUV', '21.89€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/fiatpanda.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Fiat Panda, SUV</h2>
+                <p class="price">21.89€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>5</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>4,4/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/transport_16550978.png" class="icon" alt="Icono 3">
+                        <p>Automático</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('fordfiesta', 'Ford Fiesta, Hatchback', '26.79€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/fordfiesta.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Ford Fiesta, Hatchback</h2>
+                <p class="price">26.79€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>4</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>4,0/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/caja-de-cambios.png" class="icon" alt="Icono 3">
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('fordpuma', 'Ford Puma, Hatchback', '27.88€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/fordpuma.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Ford Puma, Hatchback</h2>
+                <p class="price">27.88€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>5</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>4,2/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/caja-de-cambios.png" class="icon" alt="Icono 3">
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('opelcorsa', 'Opel Corsa, Sedán', '32.19€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/opelcorsa.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Opel Corsa, Sedán</h2>
+                <p class="price">32.19€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>5</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>5,2/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/transport_16550978.png" class="icon" alt="Icono 3">
+                        <p>Automático</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('renaultarkana', 'Renault Arkana, SUV', '37.99€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/renaultarkana.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Renault Arkana, SUV</h2>
+                <p class="price">37.99€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>5</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>5,3/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/transport_16550978.png" class="icon" alt="Icono 3">
+                        <p>Automático</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('volkswagentroc', 'Volkswagen T-Roc, SUV', '37.49€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/volkswagentroc.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Volkswagen T-Roc, SUV</h2>
+                <p class="price">37.49€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>5</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>5,3/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/caja-de-cambios.png" class="icon" alt="Icono 3">
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('peugeot5008', 'Peugeot 5008, SUV', '28.99€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/peugeot5008.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Peugeot 5008, SUV</h2>
+                <p class="price">28.99€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>5</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>5,1/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/caja-de-cambios.png" class="icon" alt="Icono 3">
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('volkswagenpassat', 'Volkswagen Passat, Sedán', '24.49€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/volkswagenpassat.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Volkswagen Passat, Sedán</h2>
+                <p class="price">24.49€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>5</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>4,8/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/caja-de-cambios.png" class="icon" alt="Icono 3">
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" onclick="seleccionarCoche('lamboaventador', 'Lamborghini Aventador, Superdeportivo', '184.49€/día')">
+            <div class="image-container">
+                <img src="/static/fotos coches/lamboaventador.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="content">
+                <h2 class="title">Lamborghini Aventador, Superdeportivo</h2>
+                <p class="price">184.49€/día</p>
+                <div class="data">
+                    <div class="info-item">
+                        <img src="/static/iconos/avatar.png" class="icon" alt="Icono 1">
+                        <p>2</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/pngwing.com.png" class="icon" alt="Icono 2">
+                        <p>9,8/100km</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="/static/iconos/transport_16550978.png" class="icon" alt="Icono 3">
+                        <p>Automático</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <!-- Footer con redirecciones a index.html y logos de redes sociales que llevan a ellas-->
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul class="footer-list">
+                    <li><a href="/templates/index.html">Alquiler de coches</a></li>
+                    <li><a href="/templates/index.html">Alquiler de furgonetas</a></li>
+                    <li><a href="/templates/index.html">Taller de mecánica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Sede Villarejo de Salvanés</h3>
+                <p>Calle Luis de Requesens, 1</p>
+                <p>Villarejo de Salvanés, 28590</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos en redes sociales</h3>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/BMW.Espana/?locale=es_ES"><img src="/static/iconos/10462343.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/opel_spain/?hl=es"><img src="/static/iconos/10462345.png" alt="Instagram"></a>
+                    <a href="https://es.linkedin.com/company/citroen"><img src="/static/iconos/10462330.png" alt="LinkedIn"></a>
+                    <a href="https://x.com/mbenzesp"><img src="/static/iconos/10483410.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 - IAW</p>
+            <p>
+                <a href="/templates/index.html">Aviso legal</a> | 
+                <a href="/templates/index.html">Política de Privacidad</a> | 
+                <a href="/templates/index.html">Política de cookies</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
