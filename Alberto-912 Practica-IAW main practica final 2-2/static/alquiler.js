@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Para que se pongan correctamente los datos del coche seleccionado en flota.html
-    const urlParams = new URLSearchParams(window.location.search);
-    const carId = urlParams.get("id");
-    const carName = urlParams.get("name");
-    const carPrice = parseFloat(urlParams.get("price")) || 0;
-  
-    const carTitleElem = document.getElementById("car-title");
-    const carPriceElem = document.getElementById("car-price");
-    const carImageElem = document.getElementById("car-image");
-  
-    if (carTitleElem) carTitleElem.textContent = carName;
-    if (carPriceElem) carPriceElem.textContent = `${carPrice} €/día`;
-    if (carImageElem) carImageElem.src = "/static/fotos coches/" + carId + ".webp";
+  // Obtener parámetros de la URL
+  const params = new URLSearchParams(window.location.search);
+  const carId = params.get("id") || "";
+  const carName = params.get("name") || "Coche desconocido";
+  const carPrice = parseFloat(params.get("price")?.replace('€/día', '') || 0);
+
+  // Referencias a elementos HTML
+  const carTitleElem = document.getElementById("car-title");
+  const carPriceElem = document.getElementById("car-price");
+  const carImageElem = document.getElementById("car-image");
+
+  if (carTitleElem) carTitleElem.textContent = carName;
+  if (carPriceElem) carPriceElem.textContent = `${carPrice.toFixed(2)} €/día`;
+  if (carImageElem) carImageElem.src = `/static/fotos coches/${carId}.webp`;
   
     // Función para calcular el precio del alquiler con los dias seleccionados
     function calculateTotal() {
@@ -124,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Si todo es válido, salta una alerta y te redirige a index.html, si hay algun campo no valido salta otra alerta diferente 
         if (isValid) {
           alert("¡Alquiler confirmado! Recibirás un sms con los detalles.");
-          window.location.href = "index.html";
+          window.location.href = "/";
         } else {
           alert("Por favor, completa todos los campos correctamente.");
         }

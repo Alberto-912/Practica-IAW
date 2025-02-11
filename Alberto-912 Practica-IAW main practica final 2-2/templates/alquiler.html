@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Head con javascript y CSS enlazados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finalizar Alquiler</title>
@@ -9,66 +8,62 @@
     <script src="/static/alquiler.js"></script>
 </head>
 <body>
+    <header class="header">
+        <h1>¡Casi listo, completa el alquiler de tu vehículo aquí!</h1>
+    </header>
 
-<header class="header">
-    <h1>¡Casi listo, completa el alquiler de tu vehículo aquí!</h1>
-</header>
+    <main>
+        <div class="car-details">
+            <img id="car-image" src="/static/fotos coches/{{ car_id }}.webp" alt="Coche seleccionado">
+            <h2 id="car-title">{{ car_name }}</h2>
+            <p id="car-price">{{ car_price }}</p>
+        </div>
 
-<main>
-    <!-- Con este bloque se coge la información del coche seleccionado con JavaScript-->
-    <div class="car-details">
-        <img id="car-image" src="" alt="Coche seleccionado">
-        <h2 id="car-title"></h2>
-        <p id="car-price"></p>
-    </div>
+        <form id="rental-form">
+            <h2>Datos del titular</h2>
 
-    <form id="rental-form">
-        <!-- Formulario para "Alquilar", se valida con JavaScript(alquiler.js)-->
-        <h2>Datos del titular</h2>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" placeholder="Juan">
+            <div class="error" id="name-error"></div>
 
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" placeholder="Juan">
-        <div class="error" id="name-error"></div>
+            <label for="lastname">Apellido/s:</label>
+            <input type="text" id="lastname" placeholder="García">
+            <div class="error" id="lastname-error"></div>
 
-        <label for="lastname">Apellido/s:</label>
-        <input type="text" id="lastname" placeholder="García">
-        <div class="error" id="lastname-error"></div>
+            <label for="nif">NIF:</label>
+            <input type="text" id="nif" placeholder="12345678X">
+            <div class="error" id="nif-error"></div>
 
-        <label for="nif">NIF:</label>
-        <input type="text" id="nif" placeholder="12345678X">
-        <div class="error" id="nif-error"></div>
+            <label for="phone">Número de teléfono:</label>
+            <input type="tel" id="phone" placeholder="612345678">
+            <div class="error" id="phone-error"></div>
 
-        <label for="phone">Número de teléfono:</label>
-        <input type="tel" id="phone" placeholder="612345678">
-        <div class="error" id="phone-error"></div>
+            <label for="start-date">Fecha de inicio del alquiler:</label>
+            <input type="date" id="start-date" min="2025-02-15">
+            <div class="error" id="start-date-error"></div>
 
-        <label for="start-date">Fecha de inicio del alquiler:</label>
-        <input type="date" id="start-date">
-        <div class="error" id="start-date-error"></div>
+            <label for="end-date">Fecha de finalización del alquiler:</label>
+            <input type="date" id="end-date">
+            <div class="error" id="end-date-error"></div>
 
-        <label for="end-date">Fecha de finalización del alquiler:</label>
-        <input type="date" id="end-date">
-        <div class="error" id="end-date-error"></div>
+            <h2>Datos de pago</h2>
 
-        <h2>Datos de pago</h2>
+            <label for="card-number">Número de tarjeta:</label>
+            <input type="text" id="card-number" placeholder="1234123412341234">
+            <div class="error" id="card-number-error"></div>
 
-        <label for="card-number">Número de tarjeta:</label>
-        <input type="text" id="card-number" placeholder="1234123412341234">
-        <div class="error" id="card-number-error"></div>
+            <label for="expiry-date">Fecha de caducidad:</label>
+            <input type="month" id="expiry-date" placeholder="11/25" min="2025-02">
+            <div class="error" id="expiry-date-error"></div>
 
-        <label for="expiry-date">Fecha de caducidad:</label>
-        <input type="month" id="expiry-date" placeholder="11/25">
-        <div class="error" id="expiry-date-error"></div>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" placeholder="123">
+            <div class="error" id="cvv-error"></div>
 
-        <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" placeholder="123">
-        <div class="error" id="cvv-error"></div>
+            <h3>Total: <span id="total-price">0</span> €</h3>
 
-        <h3>Total: <span id="total-price">0</span> €</h3>
-
-        <button type="submit">Confirmar Alquiler</button>
-    </form>
-</main>
-
+            <button type="submit">Confirmar Alquiler</button>
+        </form>
+    </main>
 </body>
 </html>

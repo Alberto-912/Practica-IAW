@@ -12,14 +12,14 @@
     <!-- Header con el logo que redirige al index y vinculos a los demás HTML-->
     <header class="header">
         <div class="header-container">
-            <a href="/templates/index.html" class="logo">
+            <a href="{{ url_for('index')}}" class="logo">
                 <img src="/static/iconos/LOGOTOTAL.png" alt="Icono Coche">
             </a>
             <h1 class="title">Alquiler Lepanto</h1>
             <nav class="nav-links">
-                <a href="/templates/locations.html">Ubicaciones</a>
-                <a href="/templates/contact.html">Contacto</a>
-                <a href="/templates/flota.html">Flota</a>
+                <a href="{{ url_for('locations')}}">Ubicaciones</a>
+                <a href="{{ url_for('contact')}}">Contacto</a>
+                <a href="{{ url_for('flota')}}">Flota</a>
             </nav>
         </div>
     </header>
@@ -30,7 +30,7 @@
         <section class="contact-form">
             <p>Para cualquier tipo de duda, consulta o cualquiera otra cosa relevante, no dudes en contactarnos mediante este formulario:</p>
             <!-- Formulario simple que se valida con JavaScript (contact.js)-->
-            <form action="contact.html" method="get" onsubmit="return validarFormulario(event)">
+            <form action="{{ url_for('index')}}" method="get" onsubmit="return validarFormulario(event)">
 
                 <div class="form-group">
                     <label for="name">Nombre</label>
@@ -69,9 +69,9 @@
             <div class="footer-section">
                 <h3>Servicios</h3>
                 <ul class="footer-list">
-                    <li><a href="/templates/index.html">Alquiler de coches</a></li>
-                    <li><a href="/templates/index.html">Alquiler de furgonetas</a></li>
-                    <li><a href="/templates/index.html">Taller de mecánica</a></li>
+                    <li><a href="{{ url_for('index')}}">Alquiler de coches</a></li>
+                    <li><a href="{{ url_for('index')}}">Alquiler de furgonetas</a></li>
+                    <li><a href="{{ url_for('index')}}">Taller de mecánica</a></li>
                 </ul>
             </div>
             
@@ -94,9 +94,9 @@
         <div class="footer-bottom">
             <p>© 2025 - IAW</p>
             <p>
-                <a href="/templates/index.html">Aviso legal</a> | 
-                <a href="/templates/index.html">Política de Privacidad</a> | 
-                <a href="/templates/index.html">Política de cookies</a>
+                <a href="{{ url_for('index')}}">Aviso legal</a> | 
+                <a href="{{ url_for('index')}}">Política de Privacidad</a> | 
+                <a href="{{ url_for('index')}}">Política de cookies</a>
             </p>
         </div>
     </footer>

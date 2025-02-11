@@ -19,6 +19,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 .header-container {
@@ -33,6 +34,16 @@ body {
 .header-container img {
     height: 70px;
     cursor: pointer;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+.nav-links a:hover {
+    text-decoration: underline;
 }
 
 /* IMAGEN Y ESLOGAN */
