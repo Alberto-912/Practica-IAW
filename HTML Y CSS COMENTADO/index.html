@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALQUILER LEPANTO</title>
+    <link rel="stylesheet" href="/static/css_index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header con el logo que redirige al index y vinculos a los demás HTML-->
+    <header class="header">
+        <div class="header-container">
+            <a href="{{ url_for('index')}}" class="logo">
+                <img src="/static/iconos/LOGOTOTAL.png" alt="Icono Coche">
+            </a>
+            <h1 class="title">Alquiler Lepanto</h1>
+            <nav class="nav-links">
+                <a href="{{ url_for('locations')}}">Ubicaciones</a>
+                <a href="{{ url_for('contact')}}">Contacto</a>
+                <a href="{{ url_for('flota')}}">Flota</a>
+            </nav>
+        </div>
+    </header>
+
+    <!--Sección del eslogan con su imagén y su título-->
+    <div class="fondo-slogan">
+        <img src="/static/iconos/fondo-slogan.jpg" alt="ciudad">
+        <h1 class="slogan">Conduce la libertad, alquila hoy</h1>
+    </div>
+
+    <!--Sección con la Bienvenida a la empresa y presentación con su título y su texto-->
+    <div class="empresa">
+        <h1>Bienvenidos a Alquiler Lepanto</h1>
+        <p>Somos una empresa de alquiler de coches con una amplia flota de vehículos modernos y económicos. 
+           Te ofrecemos la mejor experiencia de conducción con un proceso de reserva rápido y sencillo.</p>
+    </div>
+
+    <!--Sección con los botones que reditigen a flota.html y contact.html-->
+    <div class="botones-servicios">
+        <a href="{{ url_for('flota')}}" class="btn">Ver Flota de Coches</a>
+        <a href="{{ url_for('contact')}}" class="btn btn-secundario">Contáctanos</a>
+    </div>
+
+    <!--Sección de los servicios que se ofrecen con sus diferentes titulos y textos-->
+    <section class="servicios">
+        <h1>NUESTROS SERVICIOS</h1>
+        <div class="contenedor-servicios">
+            <div class="servicio">
+                <h2>Alquiler de coches</h2>
+                <p>Si necesitas alquilar un coche, te recomendamos consultar la amplia variedad de nuestra flota. En una ciudad enorme un vehículo es muchas
+                    veces la manera más cómoda y rápida de desplazarse. Alquiler Lepanto dispone de diversas sucursales repartidas por el País.
+                    Opta por un coche compacto para circular y aparcar más fácilmente, o disfruta de la conducción con alguno de nuestros sedanes y deportivos premium.
+                </p>
+            </div>
+            <div class="servicio">
+                <h2>Nuestros Servicios</h2>
+                <p>Nuestras oficinas de alquiler de coches ponen a tu alcance una amplia variedad de segmentos en distintas ciudades.
+                    Por ejemplo, si necesitas un coche con espacio para toda la familia y un amplio maletero, un monovolumen será el perfecto modelo.
+                    ¿Prefieres un descapotable de alta gama? Con Alquiler Lepanto podrás viajar a bordo de un potente Audi o un elegante Mercedes. 
+                    Gracias a nuestros extras, en cualquier ciudad puedes personalizar tu coche de alquiler con kilometraje ilimitado, sistema de navegación GPS, 
+                    o sillas para niños o bebés. 
+                </p>
+            </div>
+            <div class="servicio">
+                <h2>Destinos y Recomendaciones</h2>
+                <p>Descubre los mejores destinos con nuestros vehículos. Desde rutas urbanas hasta viajes largos, tenemos el coche perfecto para ti.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Sección de los beneficios de la empresa con sus títulos y descripciones-->
+    <section class="beneficios">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="contenedor-beneficios">
+            <div class="beneficio">
+                <h3>Variedad de Vehículos</h3>
+                <p>Disponemos de una amplia flota de coches para todas las necesidades: compactos, familiares, SUV y de lujo.</p>
+            </div>
+            <div class="beneficio">
+                <h3>Precios Competitivos</h3>
+                <p>Ofrecemos las mejores tarifas del mercado con opciones flexibles para corto y largo plazo.</p>
+            </div>
+            <div class="beneficio">
+                <h3>Atención 24/7</h3>
+                <p>Nuestro equipo de atención al cliente está disponible las 24 horas para asistirte en cualquier momento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Sección de preguntas frecuentes-->    
+    <section class="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="pregunta">
+            <h3>¿Qué documentos necesito para alquilar?</h3>
+            <p>Necesitas tu licencia de conducir vigente y una tarjeta de crédito a tu nombre.</p>
+        </div>
+        <div class="pregunta">
+            <h3>¿Puedo alquilar un coche sin tarjeta de crédito?</h3>
+            <p>Por el momento, solo aceptamos pagos con tarjeta de crédito.</p>
+        </div>
+    </section>
+
+    <!--RESEÑAS-->
+    <h1>Reseñas de Usuarios</h1>
+
+    <!-- Mostrar media de calificación con estrellas -->
+    <h2>Calificación Media: {{ media_calificacion|round(1) }} ⭐</h2>
+
+    <!-- Sección de Reseñas -->
+    <h2>Opiniones:</h2>
+    <div class="reseñas-container">
+        {% for reseña in reseñas %}
+            <div class="reseña">
+                <h3>{{ reseña[0] }}</h3>
+                <p>{{ reseña[1] }}</p>
+                <p>Calificación: {{ reseña[2] }} ⭐</p>
+            </div>
+        {% else %}
+            <p>No hay reseñas todavía.</p>
+        {% endfor %}
+    </div>
+
+    <!-- Formulario para agregar reseña -->
+    <h2>Deja tu Reseña</h2>
+    <form action="{{ url_for('agregar_resena') }}" method="POST">
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario" required></textarea>
+        <br>
+        <label for="calificacion">Calificación (1 a 5):</label>
+        <input type="number" id="calificacion" name="calificacion" min="1" max="5" required>
+        <br>
+        <button type="submit">Enviar Reseña</button>
+    </form>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Servicios -->
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul class="footer-list">
+                    <li><a href="{{ url_for('index')}}">Alquiler de coches</a></li>
+                    <li><a href="{{ url_for('index')}}">Alquiler de furgonetas</a></li>
+                    <li><a href="{{ url_for('index')}}">Taller de mecánica</a></li>
+                </ul>
+            </div>
+            <!-- Sedes -->
+            <div class="footer-section">
+                <h3>Sede Villarejo de Salvanés</h3>
+                <p>Calle Luis de Requesens, 1</p>
+                <p>Villarejo de Salvanés, 28590</p>
+            </div>
+            <!-- Redes Sociales con sus enlaces -->
+            <div class="footer-section">
+                <h3>Síguenos en redes sociales</h3>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/BMW.Espana/?locale=es_ES"><img src="/static/iconos/10462343.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/opel_spain/?hl=es"><img src="/static/iconos/10462345.png" alt="Instagram"></a>
+                    <a href="https://es.linkedin.com/company/citroen"><img src="/static/iconos/10462330.png" alt="LinkedIn"></a>
+                    <a href="https://x.com/mbenzesp"><img src="/static/iconos/10483410.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <!--Enlaces de pie de página finales-->
+        <div class="footer-bottom">
+            <p>© 2025 - IAW</p>
+            <p>
+                <a href="{{ url_for('index')}}">Aviso legal</a> | 
+                <a href="{{ url_for('index')}}">Política de Privacidad</a> | 
+                <a href="{{ url_for('index')}}">Política de cookies</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
