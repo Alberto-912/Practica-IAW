@@ -1,0 +1,120 @@
+/* El contenedor de las reseñas y las reseñas con fondo blanco redondeado y sombreado, se guardan en filas que aumentan segun las reseñas */
+.reseñas-container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #e3f2fd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.reseña {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    max-width: 100%;
+    word-wrap: break-word;
+    flex-grow: 1;
+    background-color: #f7fbff;
+    border: 2px solid #2196f3;
+}
+
+.reseña h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #1565c0;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #2196f3;
+    padding-bottom: 5px;
+}
+
+.reseña p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* El nombre de quien escribe la reseña azul mas grande */
+.reseña .nombre {
+    font-weight: bold;
+    color: #0d47a1;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+/* Los comentarios separados visiblemente del nombre y mas pequeños*/
+.reseña .comentario {
+    font-style: italic;
+    margin-top: 10px;
+    color: #333;
+    border-top: 1px solid #2196f3;
+    padding-top: 10px;
+}
+
+/* Formulario centrado azulado con bordes redondeados y sombreados */
+h2 {
+    text-align: center;
+    color: #0d47a1;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #bbdefb;
+    box-sizing: border-box; 
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #1565c0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #90caf9;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #e3f2fd;
+    color: #0d47a1;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #1976d2;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #1565c0;
+}
+
+
