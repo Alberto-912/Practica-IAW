@@ -1,0 +1,90 @@
+Cosas obligatorias que pusimos en el anteproyecto:
+- pagina principal sobre el pueblo
+- pagina en varios idiomas(minimo ingles y luego si da tiempo otros)
+- foro y o hilos donde se puedan subir fotos y poder comentarlas
+- actividades extra como encuestas y quizes
+
+Orden: 1º Página principal 2º Foro y eso 3º Actividades extras (meter más a parte de esas 2) 4º Pagina en otros idiomas y más funcionalidades extra (api del tiempo, chatbot que dijo mario .... lo apuntamos en este archivo luego)
+
+--------------------------------------------------------------------------------------------------------------Apartados:
+
+Página principal (la base de todo):
+- Apartado sobre historia del pueblo
+- Que ver (monumentos, edificios historicos ....)
+- Restaurantes y bares
+- Lugares de alojamiento
+- Negocios locales
+- Servicios públicos ( policia, medico, ayuntamiento...)
+- Educación ( fp, institutos, colegios ...)
+- Transporte ( horarios de autobuses ...)
+- Noticias
+- mas cosas que se nos ocurran
+
+Foro / hilo:
+- Poder iniciar sesión y registrarse con una bdd
+- Poder hacer publicaciones texto o fotos y videos, y que luego otros usuarios puedan hacer comentarios abajo(solo texto) y dar likes
+- Usuarios que tengan un mini perfil donde poner su foto y que salgan sus publicaciones y comentarios ( todo esto solo si no es fumada )
+- Logros de las actividades del apartado 3
+
+Actividades extras (ideas, vamos metiendo segun veamos convenientes o depende del tiempo que nos quede):
+- Encuestas del pueblo por votacion ( p.e: que dia prefieres que sea la macro en fiestas: a) viernes b) sabado ..)
+- Quizzes ( preguntas simples sobre cosas del pueblo, al completarlas que se quede la información guardada y se muestre algo en el perfil como medallas o algo así)
+- Chatbot de chatgpt ( bot con una mini bdd, que le pasemos informacion de wikipedia o algo y que responda como si fuese un pueblerino o algo, ya veremos)
+- Comparador de precios local ( simple, se selecciona un producto p.e: pan y sale una gráfica del precio de ese producto en varios sitios: el chino, mercadona, ahorramas, panaderías, lo hacemos con productos basicos: pan, gasolina, agua....)
+- Datos curiosos ( boton que cuando le des salga un dato curioso del pueblo por pantalla, metemos como 50 y que sea aleatorio, rezar por que no salga 2 veces el mismo el dia de la presentacion)
+- Seccion del pasado ( comparamos zonas del pueblo en la actualidad y antiguamente o con fotos de internet o con google maps de años pasados)
+- mas cosas que se nos ocurran o apis externas que hagan cualquier cosa util
+
+-----------------------------------------------------------------------------------------------------------------Tecnologías
+
+- Habria que hablar con el tutor, pero creo que flask ya se nos queda pequeño y habría que usar un servidor apache o algo
+- Plantillas HTML, para cada apartado de la página principal hacer una plantilla y luego ir rellenandola con cada apartado de cada cosa ( en plan una plantilla para lo de los monumentos, otra para restaurantes ....)
+- Como rellenamos dichas plantillas, tambien hablar con el tutor, podemos meter la info como tal y tener un html para cada cosa( puede ser un lio y que les parezca cutre) o solo la plantilla y que se rellene con una base de datos ( como lo de la pagina de los coches), si elegimos esa opcion estaría bien ya hacer toda la pagina así
+- CSS similares para todo
+- Comentarios muy muy basicos, ni de coña tantos como en la practica de hector
+- Probablemente sqlite tambien se nos quede pequeño y haya que usar algo como mysql o oracle ya
+
+------------------------------------------------------------------------------------------------------------------- Memoria
+Vamos apuntando mas o menos que hacemos cada dia en orden para poder ir metiendolo a la memoria, tambien apuntando errores que salgan (no que no funcione por que hayamos escrito algo mal, sino fallos de compatibilidad entre tecnologias y como lo solucionamos....)
+Focalizar mas la idea y justificar por que la hacemos y que mejoramos o impulsamos (lo que nos dijeron despues de ver el anteproyecto)
+
+----------------------------------------------------------------------------------------------------------------------Paginas con ejemplos que podemos copiar
+https://www.ciudad-chinchon.com/turismo/conoce-chinchon/donde-comer.php , esto está bien pero que cuando le hagas clic lleve a una pagina a parte y no todo ahí en medio
+https://www.ciudadrodrigo.es/ayuntamiento/category/destacados/ asi para lo de las noticias
+------------------------------------------------------------------------------------------------------------------------- Que metería yo en cada apartado de los que hay
+- Apartado sobre historia del pueblo
+algo como wikipedia, un par de fotos y lo de la historia ...
+- Que ver (monumentos, edificios historicos ....)
+descripcion e historia, donde estan, si tienen horario lo ponemos, si es un edificio que se pueda ir con cita ponemos pagina de contacto y/o telefono
+- Restaurantes y bares
+los separamos por categorias (comida rapida, tradicional,mas lujosos ...) luego en cada restaurante, información sobre el, ubicacion, contacto, horarios, si encontramos la carta la ponemos con alguna foto de algun plato y vemos si ponemos valoraciones ( google maps, tripadvisor o las metemos nosotros)
+- Lugares de alojamiento
+descripcion, locaclizacion, contacto y precio medio
+- Negocios locales
+podemos poner igual descripcion localizacion horarios y cosas de negocios significativos
+- Servicios públicos ( policia, medico, ayuntamiento...)
+lo mismo que los anteriores
+- Educación ( fp, institutos, colegios ...)
+a parte de lo mismo metemos tambien que estudios se pueden hacer en cada instituto
+- Transporte ( horarios de autobuses ...)
+los horarios de los autobuses y si conseguimos alguna api que muestre un mapa con las paradas o  cuanto falta para que pase cada bus
+- Noticias
+ponemos un par de noticias en plan cuando son las fiestas o carnavales semana santa ..... y que al hacer clic lleve a una pagina donde se explique un poco mejor (algo muy basico)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
